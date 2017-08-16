@@ -1,7 +1,7 @@
 # message-tree
-cd lib/
-git clone https://github.com/clientIO/joint.git
-cd joint/
-npm install
-bower install
-grunt build
+- cd lib/
+- git clone https://github.com/clientIO/joint.git
+- cd joint/
+- npm install
+- bower install
+- grunt build
