@@ -1,7 +1,16 @@
 (function() {
 
+
     var graph = new joint.dia.Graph;
-    var paper = new joint.dia.Paper({ el: $('#paper-html-elements'), width: 850, height: 600, gridSize: 1, model: graph });
+    var createWorkSpace = function(gridSize,model,paperName,width,height){
+        width  = width  || $(document).width();
+        height = height || $(document).height();
+    
+        return new joint.dia.Paper({ el: $('#'+paperName), width: width, height: height, gridSize: gridSize, model: model });  
+    } 
+
+    var paper = createWorkSpace(1,graph,"paper-html-elements",860,600);
+
 
 // Create a custom element.
 // ------------------------
@@ -111,7 +120,7 @@
 // -----------------------------------------------------------
 
     var Question = new joint.shapes.html.Element({
-        position: {x:10, y:10},
+        position: {x:600, y:500},
         size: { width: 170, height: 100 },
         label: 'Gender?',
         InputView:"none",
